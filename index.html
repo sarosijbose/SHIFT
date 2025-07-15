@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <style>
+      td,
+      th {
+         border: 0px solid black;
+      }
+
+      img {
+         padding: 5px;
+      }
+   </style>
+   <title>Leveraging Synthetic Adult Datasets for Unsupervised Infant Pose Estimation</title>
+
+   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+   <link rel="stylesheet" href="./static/css/bulma.min.css">
+   <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+   <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+   <link rel="stylesheet" href="./static/css/index.css">
+   <link rel="icon" href="./static/images/favicon.svg">
+   <link rel="stylesheet" href="https://unpkg.com/image-compare-viewer/dist/image-compare-viewer.min.css">
+   <link rel="stylesheet" href="css/app.css">
+   <link rel="stylesheet" href="css/bootstrap.min.css">
+   <script src="https://unpkg.com/image-compare-viewer/dist/image-compare-viewer.min.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <script defer src="./static/js/fontawesome.all.min.js"></script>
+   <script src="./static/js/bulma-carousel.min.js"></script>
+   <script src="./static/js/bulma-slider.min.js"></script>
+   <script src="./static/js/index.js"></script>
+   <script type="text/javascript" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<!-- <body>
+      <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+        <div class="navbar-menu">
+          <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+            <a class="navbar-item" href="https://keunhong.com">
+            <span class="icon">
+                <i class="fas fa-home"></i>
+            </span>
+            </a>
+      
+            <div class="navbar-item has-dropdown is-hoverable">
+              <a class="navbar-link">
+                More Research
+              </a>
+              <div class="navbar-dropdown">
+                <a class="navbar-item" href="https://hypernerf.github.io">
+                  HyperNeRF
+                </a>
+                <a class="navbar-item" href="https://nerfies.github.io">
+                  Nerfies
+                </a>
+                <a class="navbar-item" href="https://latentfusion.github.io">
+                  LatentFusion
+                </a>
+                <a class="navbar-item" href="https://photoshape.github.io">
+                  PhotoShape
+                </a>
+              </div>
+            </div>
+          </div>
+      
+        </div>
+      </nav> -->
+<section class="hero">
+   <div class="hero-body">
+      <div class="container is-max-desktop">
+         <div class="columns is-centered">
+            <div class="column has-text-centered">
+               <h1 class="title is-1 publication-title" , style="color:blue;">SHIFT:</h1>
+               <h1 class="title is-4 publication-title">Leveraging Synthetic Adult Datasets for Unsupervised Infant Pose Estimation</h1>
+               <div class="is-size-5 publication-authors">
+                  <span class="author-block">
+                     <a href="https://sarosijbose.github.io/">Sarosij Bose</a><sup>1</sup>,</span>
+                  <span class="author-block">
+                     <a href="https://www.linkedin.com/in/hannah-dela-cruz-4a973725a">Hannah Dela Cruz</a><sup>1</sup></span>
+                  <span class="author-block">
+                     <a href="https://www.linkedin.com/in/arindam-dutta-a07451292/">Arindam Dutta</a><sup>1</sup>,</span>
+                  <span class="author-block">
+                     <a href="https://sites.google.com/view/prt-lab/people">Elena Kokkoni</a><sup>1</sup>,</span>
+                  <span class="author-block">
+                     <a href="https://sites.google.com/view/arcs-lab/people">Konstantinos Karydis</a><sup>1</sup>,</span>
+                  <span class="author-block">
+                     <a href="https://vcg.ece.ucr.edu/amit">Amit K. Roy-Chowdhury</a><sup>1</sup></span>
+                  </span>
+               </div>
+               <div class="is-size-5 publication-authors">
+                  <span class="author-block"><sup>1</sup>University of California, Riverside</span>
+               </div>
+                   <div class="is-size-5 column has-text-centered">
+                     <a href="https://affective-behavior-analysis-in-the-wild.github.io/8th/"><b>CVPR 2025</b> 8<sup>th</sup> ABAW Workshop</a>
+                     </span>
+                     </div>
+               <div class="column has-text-centered">
+                  <div class="publication-links">
+                     <!-- PDF Link. -->
+                     <span class="link-block">
+                        <a target="_blank" href="https://openaccess.thecvf.com/content/CVPR2025W/ABAW/html/Bose_Leveraging_Synthetic_Adult_Datasets_for_Unsupervised_Infant_Pose_Estimation_CVPRW_2025_paper.html"
+                           class="external-link button is-normal is-rounded is-dark">
+                           <span class="icon">
+                              <i class="fas fa-file-pdf"></i>
+                           </span>
+                           <span>Paper</span>
+                        </a>
+                     </span>
+                     <span class="link-block">
+                        <a target="_blank" href="https://arxiv.org/abs/2504.05789"
+                           class="external-link button is-normal is-rounded is-dark">
+                           <span class="icon">
+                              <i class="ai ai-arxiv"></i>
+                           </span>
+                           <span>arXiv</span>
+                        </a>
+                     </span>
+                     <span class="link-block">
+                        <a target="_blank" href="static/assets/SHIFT-poster.png"
+                           class="external-link button is-normal is-rounded is-dark">
+                           <span class="icon">
+                              <i class="far fa-images"></i>
+                           </span>
+                           <span>Poster</span>
+                        </a>
+                     </span>
+                     <span class="link-block">
+                        <a href=""
+                           class="external-link button is-normal is-rounded is-dark">
+                           <span class="icon">
+                              <i class="fab fa-code"></i>
+                           </span>
+                           <span>Code (Coming Soon)</span>
+                        </a>
+                     </span>
+
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+<section class="hero teaser">
+   <div class="container is-max-desktop">
+      <div class="hero-body">
+         <img class="round center-image" style="width:700px;" src="static/assets/overview.png" />
+         <h2 class="subtitle has-text-justified">
+            <span class="dnerf"></span> <b>Problem Overview</b>: On the top row, from left to right keypoint predictions are from a baseline adult human pose estimation model, next are predictions from a SOTA infant pose estimation model <a href="https://doi.org/10.1109/FG52635.2021.9666956" target="_blank">FiDIP</a>, and finally predictions from our method, SHIFT. Adult pose estimation models fail when directly
+                                                                 applied to infant data; similarly, <a href="https://link.springer.com/chapter/10.1007/978-3-031-19827-4_35" target="_blank">UniFrame</a> struggles to overcome the domain shift between adults and infants. In contrast, SHIFT accounts for the highly self-occluded pose distribution of infants, thereby effectively adapting to the infant domain.
+         </h2>
+      </div>
+   </div>
+</section>
+
+<section class="section">
+   <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+         <div class="column is-four-fifths">
+            <h2 class="title is-3">Abstract</h2>
+            <div class="content has-text-justified">
+                Human pose estimation is a critical tool across a variety of healthcare applications. Despite significant progress in pose estimation algorithms targeting adults, such developments for infants remain limited.
+                Existing algorithms for infant pose estimation, despite achieving commendable performance, depend on fully supervised approaches that require large amounts of labeled data.
+                These algorithms also struggle with poor generalizability under distribution shifts. To address these challenges, we introduce <b>SHIFT: Leveraging <u>S</u>ynt<u>H</u>etic Adult Datasets for Unsupervised <u>I</u>n<u>F</u>an<u>T</u> Pose Estimation</b>,
+                which leverages the pseudolabeling-based Mean-Teacher framework to compensate for the lack of labeled data and addresses distribution shifts by enforcing consistency between the student and the teacher
+                pseudo-labels. Additionally, to penalize implausible predictions obtained from the mean-teacher framework we also incorporate an infant manifold pose prior. To enhance SHIFT’s self-occlusion perception ability, we propose a
+                novel visibility consistency module for improved alignment of the predicted poses with the original image. Extensive experiments on multiple benchmarks show that SHIFT significantly outperforms existing state-of-the-art unsupervised
+                domain adaptation (UDA) based pose estimation methods by ∼ 5% and supervised infant pose estimation methods by a margin of ∼ 16%. The project page is available at:<span style="color:#FF4081;"> sarosijbose.github.io/SHIFT</span>.
+               </p>
+            </div>
+         </div>
+      </div>
+      <!--/ Abstract. -->
+      
+      <!-- Method. -->
+      <section class="section">
+         <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+               <div class="column is-four-fifths">
+                  <h2 class="title is-3">Method</h2>
+               </div>
+            </div>
+         </div>
+         <div class="hero-body">
+             <img class="round center-image" style="width:1000px;" src="./static/assets/framework.png" alt="overall" />
+         </div>
+         <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+              <div class="column is-four-fifths">
+                <div class="content has-text-justified">
+                   <p class="subtitle has-text-justified">
+                            <span class="dnerf"></span> SHIFT utilizes the Mean-Teacher framework to update the teacher model M<sub>t</sub> with an Exponential Moving Average (EMA) of the student model M<sub>s</sub>'s weights to adapt the model pre-trained on a labeled adult source dataset (x<sub>s</sub>, y<sub>s</sub>) to
+                            unlabeled infant target images (x<sub>t</sub>) (Section 3.2). To address anatomical variations in infants, SHIFT employs an infant pose prior \(\theta_p\) which assigns plausibility scores for each prediction of the student model M<sub>s</sub> (Section 3.3). 
+                            Further, to handle the large self-occlusions in the target domain, we employ an off-the-model F<sub>seg</sub> to give pseudo segmentation masks p<sub>t</sub> with which our Kp2Seg module \(G(\cdot)\) learns to perform pose-image visibility alignment (Section 3.4)
+                            hence effectively leveraging the context present in the visible portions of each image. All the learnable components of the framework are denoted in red and rest in black.
+                            </p>
+                    &nbsp;
+                </div>
+              </div>
+            </div>
+         </div>
+      </section>
+      <!--/ Method. -->
+
+      <!-- Results. -->
+      <section class="hero">
+         <div class="hero-body">
+            <div class="container is-max-desktop">
+               <div class="columns is-centered has-text-centered">
+                  <div class="column is-four-fifths">
+                     <h2 class="title is-3">Results</h2>
+                     <div class="content has-text-justified">
+                        <center>
+                           <img src="static/assets/results.png" alt="qualitative_results" border=0 height=200 width=1500 />
+                        </center>
+                        <p class="subtitle has-text-justified">
+                            <b><u>Qualitative Results: </u></b>Qualitative results on <b>SURREAL → SyRIP (top 3 rows)</b> and <b>SURREAL → MINI-RGBD (bottom 2 rows)</b>. From left to right:
+                                    source only keypoints, keypoint predictions by <a href="https://link.springer.com/chapter/10.1007/978-3-031-19827-4_35" target="_blank">UniFrame</a>, predictions by <a href="https://doi.org/10.1109/FG52635.2021.9666956" target="_blank">FiDIP</a>, predictions by SHIFT, and ground truth keypoints. As it
+                                    can be seen above, the infant prior is essential to predict plausible poses in cases where other methods fail (top row). Further, our method
+                                    can utilize context from visible regions to predict keypoints in self-occluded areas <b>(2nd and 3rd row)</b> while seamlessly adapting to different
+                                    scenarios (4th and 5th row). <span style="font-size: 2em;">○</span> denotes the self-occluded regions in the images.
+                           <br>
+                           <br>
+
+                        <center>
+                            <img src="static/assets/self-occlusion.png" alt="self-occlusion" border=0 height=150
+                                width=1500 />
+                        </center>
+                           <p class="subtitle has-text-justified">
+                            <b><u>Pose Estimation under Self-Occlusions:</u></b> <b>SURREAL → SyRIP.</b> <a href="https://link.springer.com/chapter/10.1007/978-3-031-19827-4_35" target="_blank">UniFrame</a> prediction (left panel) fails to correctly estimate significant portions of the lower back and left hand of the infant while
+                                    SHIFT is able to reasonably do so. Ground truth (rightmost panel) and extracted mask (second from left panel) are also shown.
+                           <br>
+                           <br>
+
+                        <div style="margin: 40px 0;">
+                        <h2 class="title is-3" style="text-align: center;">Benchmarking <span style="color: blue;">SHIFT</span></h2>
+                        
+                        <p class="subtitle has-text-justified">
+                            Within the domain adaptation setting for infant pose estimation, SHIFT method outperforms existing approaches. 
+                            As shown below, SHIFT achieves superior performance compared to both unsupervised domain adaptation (UDA) methods 
+                            and fully supervised infant pose estimation techniques. The best numbers are highlighted in <b>bold</b>, second best are <u>underlined</u>.
+                        </p>
+
+                        <div style="display: flex; justify-content: space-between; margin-top: 30px;width: 100%; max-width: 1200px; margin-left: auto; margin-right: auto;">
+                            <!-- Left table -->
+                            <div style="width: 49%;">
+                                <center>
+                                    <img src="static/assets/table1.png" alt="quantitative_results_uda_minirgbd" border=0 width="100%" />
+                                </center>
+                            </div>
+                            
+                            <!-- Right table -->
+                            <div style="width: 49%;">
+                                <center>
+                                    <img src="static/assets/table2.png" alt="quantitative_results_uda_syrip" border=0 width="100%" />
+                                </center>
+                            </div>
+                        </div>
+
+                        <!-- Shared caption for side-by-side tables -->
+                        <p class="subtitle has-text-centered" style="font-size: 0.9em; margin-top: 10px; margin-bottom: 30px;">
+                            <b>Table 1:</b> Comparison with UDA methods on adult → infant adaptation: <b>SURREAL → MINI-RGBD</b> (left) and <b>SURREAL → SyRIP</b> (right).
+                        </p>
+
+                        <!-- Third table below -->
+                        <div style="margin-top: 20px;">
+                            <center>
+                                <img src="static/assets/table3.png" alt="quantitative_results_supervised" border=0 width="60%" />
+                            </center>
+                            <p class="subtitle has-text-centered" style="font-size: 0.9em;">
+                                <b>Table 2:</b> Comparison with UDA methods on infant → infant adaptation: <b>SyRIP → MINI-RGBD</b>.
+                            </p>
+                        </div>
+
+                     </div>
+                  </div>
+               </div>
+            </div>
+      <!-- /Results. -->
+       
+      <!-- BibTeX. -->
+            <section class="section" id="BibTeX">
+               <div class="container is-max-desktop content">
+                  <h2 class="title">BibTeX</h2>
+                  <pre><code>@InProceedings{Bose_2025_CVPR,
+                author    = {Bose, Sarosij and Cruz, Hannah Dela and Dutta, Arindam and Kokkoni, Elena and Karydis, Konstantinos and Chowdhury, Amit Kumar Roy},
+                title     = {Leveraging Synthetic Adult Datasets for Unsupervised Infant Pose Estimation},
+                booktitle = {Proceedings of the Computer Vision and Pattern Recognition Conference (CVPR) Workshops},
+                month     = {June},
+                year      = {2025},
+                pages     = {5562-5571}
+            }
+            }</code></pre>
+               </div>
+            </section>
+            <script>
+               const viewers = document.querySelectorAll(".image-compare");
+               viewers.forEach((element) => {
+                  let view = new ImageCompare(element, {
+                     hoverStart: true,
+                     addCircle: true
+                  }).mount();
+               });
+
+               $(document).ready(function () {
+                  var editor = CodeMirror.fromTextArea(document.getElementById("bibtex"), {
+                     lineNumbers: false,
+                     lineWrapping: true,
+                     readOnly: true
+                  });
+                  $(function () {
+                     $('[data-toggle="tooltip"]').tooltip()
+                  })
+               });
+            </script>
+            <br>
+      <!-- /BibTeX. -->
+
+            <!-- Footers. -->
+            <!-- <p style="text-align:center"> <img
+                  src="https://badges.toozhao.com/badges/01HTTX5CCFCP5V35WK5JYTW63R/green.svg" /> </a></p> -->
+
+            <p style="text-align:center"> Copyright: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"> CC
+                  BY-NC-SA 4.0</a> © Sarosij Bose | Last updated: 15<sup>th</sup> July 2025 | Website credits to  <a
+                  href="https://nerfies.github.io/"> Nerfies</a></a></p>
+            </body>
+
+</html>
